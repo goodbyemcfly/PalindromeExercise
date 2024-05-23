@@ -10,7 +10,19 @@ namespace PalindromeExercise
     {
         public bool IsAPalindrome(string word)
         {
-            return word.SequenceEqual(word.Reverse());
+            var stringAsCharArray = word.ToCharArray();
+            Array.Reverse(stringAsCharArray);
+
+            /* if (word == new string(stringAsCharArray))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            } */
+
+            return word.SequenceEqual(stringAsCharArray);
         }
     }
 }
